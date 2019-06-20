@@ -1,0 +1,159 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Documents\nios_repo\user_hardware\simulation\modelsim
+Econtrol_register
+Z1 w1561043023
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dC:\Users\User\Documents\nios_repo\user_hardware\simulation\modelsim
+Z8 8C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd
+Z9 FC:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd
+l0
+L15
+Vio>b[e54j2bFCK03fAnd00
+Z10 OV;C;10.1d;51
+31
+Z11 !s108 1561047866.231000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd|
+Z13 !s107 C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd|
+Z14 o-93 -work work -O0
+Z15 tExplicit 1
+!s100 gTGOPcAVg@XI=0jFAWPiH0
+!i10b 1
+Abehave
+R2
+R3
+R4
+R5
+R6
+DEx4 work 16 control_register 0 22 io>b[e54j2bFCK03fAnd00
+l32
+L27
+VTn0BgcI=Q`jY7GYUj0kjm1
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 b@[V8XTeHJHda<8baYM8S3
+!i10b 1
+Ecounter8b
+Z16 w1560436742
+R4
+R5
+R6
+R7
+Z17 8C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd
+Z18 FC:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd
+l0
+L23
+VA^WDQD;U2z0e13EW<Sl380
+R10
+31
+Z19 !s108 1561047866.538000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd|
+Z21 !s107 C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd|
+R14
+R15
+!s100 n:=O92mIQX1CF;FDeSgD@0
+!i10b 1
+Abehave
+R4
+R5
+R6
+DEx4 work 9 counter8b 0 22 A^WDQD;U2z0e13EW<Sl380
+l34
+L31
+V`2@ZGmBV>XDVL=TMfY_cQ3
+R10
+31
+R19
+R20
+R21
+R14
+R15
+!s100 ENAOi]Y1jdNoLnOIf1PQI2
+!i10b 1
+Ecounter_01
+Z22 w1561047722
+R4
+R2
+R5
+R6
+R7
+Z23 8C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+Z24 FC:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+l0
+L14
+VN_6Xf3:^:[Xa8E>_WdkD51
+R10
+31
+Z25 !s108 1561047866.389000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd|
+Z27 !s107 C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd|
+R14
+R15
+!s100 EU;f^gSOl`lHZ9WMY:h]V2
+!i10b 1
+Abehave
+R4
+R2
+R5
+R6
+DEx4 work 10 counter_01 0 22 N_6Xf3:^:[Xa8E>_WdkD51
+l25
+L23
+Ve_KkNOJSJ:599m1Yj1bW51
+R10
+31
+R25
+R26
+R27
+R14
+R15
+!s100 6DZFUO5QekXRcn^P860MC2
+!i10b 1
+Euser_hardware
+Z28 w1561045704
+R4
+R5
+R6
+R7
+Z29 8C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd
+Z30 FC:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd
+l0
+L12
+VYf9V>mg?i_jZR>B5[1_Rf1
+!s100 fD5__;ab4bJZoPFL6bhe60
+R10
+31
+!i10b 1
+Z31 !s108 1561047866.699000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd|
+Z33 !s107 C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd|
+R14
+R15
+Abehave
+R4
+R5
+R6
+DEx4 work 13 user_hardware 0 22 Yf9V>mg?i_jZR>B5[1_Rf1
+l63
+L21
+VD0@<PGLm?ndTCD9blXMoD2
+!s100 `M>f:>_QHW]kJNN61=edZ0
+R10
+31
+!i10b 1
+R31
+R32
+R33
+R14
+R15

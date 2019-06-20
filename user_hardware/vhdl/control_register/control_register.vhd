@@ -49,7 +49,7 @@ architecture behave of control_register is
 
 		end if;	
 	end process;
-	d <= write_data;
+	--d <= write_data;
 end architecture;
 
 

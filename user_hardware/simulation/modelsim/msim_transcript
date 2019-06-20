@@ -1,0 +1,290 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do user_hardware_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity control_register
+# -- Compiling architecture behave of control_register
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter8b
+# -- Compiling architecture behave of counter8b
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity user_hardware
+# -- Compiling architecture behave of user_hardware
+# 
+vcom -reportprogress 300 -work work C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+vcom -reportprogress 300 -work work C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01_tb
+# -- Compiling architecture test of counter_01_tb
+# ** Warning: [4] C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01_tb.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vsim +altera -do user_hardware_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.counter_01_tb
+# vsim +altera -do user_hardware_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.counter_01_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.counter_01_tb(test)
+# Loading ieee.std_logic_arith(body)
+# Loading rtl_work.counter_01(behave)
+# do user_hardware_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity control_register
+# -- Compiling architecture behave of control_register
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter8b
+# -- Compiling architecture behave of counter8b
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity user_hardware
+# -- Compiling architecture behave of user_hardware
+# 
+add wave -position insertpoint  \
+sim:/counter_01_tb/input_tb \
+sim:/counter_01_tb/output_0_tb \
+sim:/counter_01_tb/output_1_tb
+run 101ns
+# ** Fatal: (vsim-3421) Value 10 for cont_0 is out of range 0 to 9.
+#    Time: 0 ps  Iteration: 1  Process: /counter_01_tb/dect/line__26 File: C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+# Fatal error in ForLoop loop at C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd line 38
+# 
+# HDL call sequence:
+# Stopped at C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd 38 ForLoop loop
+# 
+vcom -reportprogress 300 -work work C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+vcom -reportprogress 300 -work work C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01_tb
+# -- Compiling architecture test of counter_01_tb
+# ** Warning: [4] C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01_tb.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vsim +altera -do user_hardware_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.counter_01 rtl_work.counter_01_tb
+# vsim +altera -do user_hardware_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.counter_01 rtl_work.counter_01_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.counter_01(behave)
+# Loading rtl_work.counter_01_tb(test)
+# do user_hardware_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity control_register
+# -- Compiling architecture behave of control_register
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter8b
+# -- Compiling architecture behave of counter8b
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity user_hardware
+# -- Compiling architecture behave of user_hardware
+# 
+add wave -position insertpoint  \
+sim:/counter_01/input \
+sim:/counter_01/output_0 \
+sim:/counter_01/output_1
+run 110ns
+vcom -reportprogress 300 -work work C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01_tb
+# -- Compiling architecture test of counter_01_tb
+# ** Warning: [4] C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+vsim +altera -do user_hardware_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.counter_01_tb
+# vsim +altera -do user_hardware_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.counter_01_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.counter_01_tb(test)
+# Loading ieee.std_logic_arith(body)
+# Loading rtl_work.counter_01(behave)
+# do user_hardware_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/control_register/control_register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity control_register
+# -- Compiling architecture behave of control_register
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_01
+# -- Compiling architecture behave of counter_01
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_8bits/counter8b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter8b
+# -- Compiling architecture behave of counter8b
+# vcom -93 -work work {C:/Users/User/Documents/nios_repo/user_hardware/vhdl/user_hardware/user_hardware.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity user_hardware
+# -- Compiling architecture behave of user_hardware
+# 
+add wave -position insertpoint  \
+sim:/counter_01_tb/input_tb \
+sim:/counter_01_tb/output_0_tb \
+sim:/counter_01_tb/output_1_tb
+run 101ns
+# ** Fatal: (vsim-3421) Value 100 for cont_0 is out of range 0 to 99.
+#    Time: 15 ns  Iteration: 1  Process: /counter_01_tb/dect/line__26 File: C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd
+# Fatal error in ForLoop loop at C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd line 38
+# 
+# HDL call sequence:
+# Stopped at C:/Users/User/Documents/nios_repo/user_hardware/vhdl/counter_01/counter_01.vhd 38 ForLoop loop
+# 

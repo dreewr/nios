@@ -12,7 +12,7 @@ use ieee.numeric_std.all;
 entity user_hardware is
 	port(
 		--test_led, test_led2: out std_logic;
-		load: in std_logic_vector(7 downto 0); 	
+		nios_input: in std_logic_vector(7 downto 0); 	
 		clk, rst: in std_logic;
 		reg_0, reg_1: out std_logic_vector(7 downto 0)
 	);
@@ -33,30 +33,65 @@ architecture behave of user_hardware is
 		);
 	end component;
 
+	component counter8b is
+		port(
+		clk, rst, en: in std_logic;
+		output: out std_logic_vector(7 downto 0);
+		carry: out std_logic
+	);
+	end component;
+	
+	component counter_01 is
+		port(
+		input: in std_logic_vector(7 downto 0);
+		output_0: out std_logic_vector(7 downto 0); 
+		output_1: out std_logic_vector(7 downto 0) 
+	);
+	end component;
+
 ---------------------------------------------------------  Início declaração dos sinais
 
 	--Sinais cont_9bits
 	--signal fifo_clk: std_logic; -- saída 1 do divisor
 
 	
-	--Sinais counter_01
-	--signal init_ram_clk: std_logic; -- saída 1 do divisor
+	--Sinais cont_reg
+	signal gnd: std_logic:='X'; -- saída 1 do divisor
+	signal gnd8: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal gnd16: std_logic_vector(15 downto 0); -- saída 1 do divisor
 	
 	begin
 	
 --------------------------------------------------------  PortMap dos componentes
 ---------	Adicionar counter_8bits e counter_01
 
-		--blank_ram: blankRam
-		--port map(
-		--clock			=> blank_ram_clk,
-		--data			=> blank_ram_input,
-		--	rdaddress	=> blank_ram_rdaddress,    -- 10bits
-		--rden			=> blank_ram_rden,
-		--wraddress	=> blank_ram_wraddress, --posso mapear direto pra saida do top-level
-		--wren			=> blank_ram_wren,
-		--q				=> blank_ram_output --test_output
-		--);
+		cont_reg: control_register
+		port map(
+		clk			=> clk,
+		rst			=> rst,
+		rd				=> gnd,    -- 10bits
+		wr				=> gnd,
+		cs				=> gnd, --posso mapear direto pra saida do top-level
+		write_data	=> gnd16,
+		read_data	=> gnd16, --test_output
+		q 				=> gnd16
+		);
+	
+		cont_8b: counter8b
+		port map(
+		clk				=> clk,
+		rst				=> rst,
+		en					=> gnd,    -- 10bits
+		output			=> gnd8,
+		carry				=> gnd
+		);
+	
+		cont_01: counter_01
+		port map(
+		input				=> gnd8,
+		output_0			=> gnd8,
+		output_1				=> gnd8    -- 10bits
+		);
 	
 	process (rst, clk)
 	
@@ -69,4 +104,5 @@ architecture behave of user_hardware is
 		
 	end if;
 	end process;
+	
 end architecture;

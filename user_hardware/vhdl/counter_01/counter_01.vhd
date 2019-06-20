@@ -6,6 +6,7 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.conv_std_logic_vector;
 use ieee.numeric_std.all;
 
 --Contador de 0s e 1s
@@ -22,16 +23,26 @@ end entity;
 architecture behave of counter_01 is
 
 	begin
-	process --(clk, rst)
-	begin
+	process (input)
+	
+	variable cont_1: integer range 0 to 99 := 0;
+	variable cont_0: integer range 0 to 99 := 0;
+	variable i: integer range 0 to 9 := 0;
+	
+		begin
 		
+		for i in 0 to 7 loop
+			if input(i) = '1' then
+				cont_1 := cont_1 + 1;
+			else 
+				cont_0 := cont_0 + 1;
+			end if;
+		end loop;	
+		
+		--Corrigir isso aqui pra fazer sentido
+		output_0 <= conv_std_logic_vector(cont_0, output_0'length);
+		output_1 <= conv_std_logic_vector(cont_1, output_1'length);
 
 	end process;
 end architecture;
 
-
---if rst = '1' then
-			
---elsif clk' event and clk = '1' then
-			
---end if;

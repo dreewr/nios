@@ -11,153 +11,28 @@ entity counter8b_tb is
 end;
 
 architecture test of counter8b_tb is
-	component counter8b
-		port(
-		clk, rst, en: in std_logic;
-		output: out std_logic_vector(7 downto 0);
-		carry: out std_logic
+	port(
+		--clk, rst, en: in std_logic;
+		input: in std_logic_vector(7 downto 0);
+		output_0: out std_logic_vector(7 downto 0); --
+		output_1: out std_logic_vector(7 downto 0) --
 	);
 	end component;
 	
-	signal clock, reset, enable: std_logic;
-	signal s_output, crr: std_logic;
+	signal input_tb, output_0_tb, output_1_tb: std_logic_vector(7 downto 0);
+
 	begin
-		dect: counter4b port map(
-			clk => clock,
-			rst => reset,
-			en =>  enable,
-			carry => crr,
-			output => s_output
+		dect: counter_01 port map(
+		input => input_tb,
+		output_0 => output_0,
+		output_1 => output_1
 		);
 	process
 	begin
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --1
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --2
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --3
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --4
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --5
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --6
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --7
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --8
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --9
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --0
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --1
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '1';
-		wait for 50 ns; --0
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --1
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --2
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --3
-		enable <= '0';
-		clock <= '0';
-		reset <= '0';
-		wait for 50 ns;
-		enable <= '1';
-		clock <= '1';
-		reset <= '0';
-		wait for 50 ns; --4
+		for I in 0 to 100 loop	
+		input_tb <= std_logic_vector( unsigned(input_tb) + 1 ); 
+		wait for 1ns;
+	
+	end loop;
 	end process;
 end architecture;
