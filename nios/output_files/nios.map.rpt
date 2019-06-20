@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nios
-Thu Jun 20 00:10:28 2019
+Thu Jun 20 01:53:13 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -130,16 +130,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 20 00:10:27 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 20 01:53:13 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; nios                                            ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 3,331                                           ;
-;     Total combinational functions  ; 2,731                                           ;
+; Total logic elements               ; 3,330                                           ;
+;     Total combinational functions  ; 2,730                                           ;
 ;     Dedicated logic registers      ; 2,004                                           ;
 ; Total registers                    ; 2004                                            ;
-; Total pins                         ; 11                                              ;
+; Total pins                         ; 12                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 127,488                                         ;
 ; Embedded Multiplier 9-bit elements ; 4                                               ;
@@ -281,7 +281,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; nios/synthesis/submodules/altera_merlin_arbitrator.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/User/Documents/nios_repo/nios/nios/synthesis/submodules/altera_merlin_arbitrator.sv                   ;         ;
 ; nios/synthesis/submodules/altera_avalon_sc_fifo.v                       ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/nios_repo/nios/nios/synthesis/submodules/altera_avalon_sc_fifo.v                       ;         ;
 ; nios/synthesis/nios.v                                                   ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/nios_repo/nios/nios/synthesis/nios.v                                                   ;         ;
-; top.v                                                                   ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/nios_repo/nios/top.v                                                                   ;         ;
+; top.vhd                                                                 ; yes             ; User VHDL File                   ; C:/Users/User/Documents/nios_repo/nios/top.vhd                                                                 ;         ;
 ; altsyncram.tdf                                                          ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                               ;         ;
 ; stratix_ram_block.inc                                                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                        ;         ;
 ; lpm_mux.inc                                                             ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                  ;         ;
@@ -331,28 +331,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 3,331  ;
+; Estimated Total logic elements              ; 3,330  ;
 ;                                             ;        ;
-; Total combinational functions               ; 2731   ;
+; Total combinational functions               ; 2730   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 1317   ;
-;     -- 3 input functions                    ; 984    ;
-;     -- <=2 input functions                  ; 430    ;
+;     -- 4 input functions                    ; 1318   ;
+;     -- 3 input functions                    ; 981    ;
+;     -- <=2 input functions                  ; 431    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 2587   ;
+;     -- normal mode                          ; 2586   ;
 ;     -- arithmetic mode                      ; 144    ;
 ;                                             ;        ;
 ; Total registers                             ; 2004   ;
 ;     -- Dedicated logic registers            ; 2004   ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 11     ;
+; I/O pins                                    ; 12     ;
 ; Total memory bits                           ; 127488 ;
 ; Embedded Multiplier 9-bit elements          ; 4      ;
 ; Maximum fan-out node                        ; clk    ;
 ; Maximum fan-out                             ; 2031   ;
-; Total fan-out                               ; 20356  ;
+; Total fan-out                               ; 20353  ;
 ; Average fan-out                             ; 4.07   ;
 +---------------------------------------------+--------+
 
@@ -362,7 +362,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                                                                                            ; 2731 (1)          ; 2004 (0)     ; 127488      ; 4            ; 0       ; 2         ; 11   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                               ; work         ;
+; |top                                                                                                            ; 2730 (1)          ; 2004 (0)     ; 127488      ; 4            ; 0       ; 2         ; 12   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                               ; work         ;
 ;    |nios:u0|                                                                                                    ; 2445 (0)          ; 1835 (0)     ; 127488      ; 4            ; 0       ; 2         ; 0    ; 0            ; |top|nios:u0                                                                                                                                                                                                                                                                                                                                       ; work         ;
 ;       |altera_avalon_sc_fifo:led_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                         ; 5 (5)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_avalon_sc_fifo:led_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                                                       ; work         ;
 ;       |altera_avalon_sc_fifo:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo| ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_avalon_sc_fifo:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                               ; work         ;
@@ -468,8 +468,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |KIFI3548:TPOO7242|                                                                                    ; 13 (13)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|KIFI3548:TPOO7242                                                                                                                                                                                                                                                                                  ; work         ;
 ;          |LQYT7093:LRYQ7721|                                                                                    ; 22 (22)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|LQYT7093:LRYQ7721                                                                                                                                                                                                                                                                                  ; work         ;
 ;          |PUDL0439:ESUL0435|                                                                                    ; 24 (24)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|PUDL0439:ESUL0435                                                                                                                                                                                                                                                                                  ; work         ;
-;    |sld_hub:auto_hub|                                                                                           ; 161 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                              ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                            ; 160 (120)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                                 ; work         ;
+;    |sld_hub:auto_hub|                                                                                           ; 160 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                              ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                            ; 159 (119)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                                 ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                                                              ; 23 (23)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                         ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                            ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                                       ; work         ;
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -920,16 +920,6 @@ Encoding Type:  One-Hot
 ; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|A_wr_data_unfiltered[4]                                                                                                                                                                                                                            ;
 ; 6:1                ; 10 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|F_ic_data_rd_addr_nxt[1]                                                                                                                                                                                                                           ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 48 LEs               ; 4 LEs                  ; Yes        ; |top|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|PUDL0439:ESUL0435|YROJ4113[2]                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                                                                                                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                                                                                                                                                           ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[2][0]                                                                                                                                                                                                               ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]                                                                                                                                                                                                               ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4]                                                                                                                                                                                     ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[2][1]                                                                                                                                                                                                        ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                                                                                                                                                                                                        ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                                                                                                                                                 ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                                                                                                                                          ;
-; 28:1               ; 4 bits    ; 72 LEs        ; 52 LEs               ; 20 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                                                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2479,15 +2469,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+---------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:34     ;
-; sld_hub:auto_hub ; 00:00:04     ;
-; pzdyqx:nabboc    ; 00:00:02     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:16     ;
+; pzdyqx:nabboc  ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -2496,7 +2485,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 20 00:08:39 2019
+    Info: Processing started: Thu Jun 20 01:52:26 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nios -c nios
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rsp_xbar_mux_001.sv
@@ -2602,7 +2591,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file nios/sy
     Info (12023): Found entity 1: altera_avalon_sc_fifo
 Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/nios.v
     Info (12023): Found entity 1: nios
-Info (12021): Found 1 design units, including 1 entities, in source file top.v
+Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
+    Info (12022): Found design unit 1: top-behave
     Info (12023): Found entity 1: top
 Warning (10037): Verilog HDL or VHDL warning at nios_nios2_qsys_0.v(2074): conditional expression evaluates to a constant
 Warning (10037): Verilog HDL or VHDL warning at nios_nios2_qsys_0.v(2076): conditional expression evaluates to a constant
@@ -2825,24 +2815,22 @@ Info (265071): Evaluation period of megafunction that supports OpenCore Plus fea
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (17049): 14 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/nios_repo/nios/output_files/nios.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst"
 Info (21057): Implemented 3872 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 3609 logic cells
+    Info (21061): Implemented 3608 logic cells
     Info (21064): Implemented 243 RAM segments
     Info (21062): Implemented 4 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4725 megabytes
-    Info: Processing ended: Thu Jun 20 00:10:28 2019
-    Info: Elapsed time: 00:01:49
-    Info: Total CPU time (on all processors): 00:01:09
+    Info: Peak virtual memory: 4746 megabytes
+    Info: Processing ended: Thu Jun 20 01:53:13 2019
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:42
 
 
 +------------------------------------------+

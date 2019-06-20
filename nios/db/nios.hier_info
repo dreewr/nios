@@ -1,15 +1,16 @@
 |top
-clk => clk.IN1
-rx => rx.IN1
+clk => nios:u0.clk_clk
+rst => ~NO_FANOUT~
+rx => nios:u0.rs232_external_connection_rxd
 tx <= nios:u0.rs232_external_connection_txd
-led[0] <= nios:u0.led_external_connection_export
-led[1] <= nios:u0.led_external_connection_export
-led[2] <= nios:u0.led_external_connection_export
-led[3] <= nios:u0.led_external_connection_export
-led[4] <= nios:u0.led_external_connection_export
-led[5] <= nios:u0.led_external_connection_export
-led[6] <= nios:u0.led_external_connection_export
-led[7] <= nios:u0.led_external_connection_export
+leds[0] <= nios:u0.led_external_connection_export[0]
+leds[1] <= nios:u0.led_external_connection_export[1]
+leds[2] <= nios:u0.led_external_connection_export[2]
+leds[3] <= nios:u0.led_external_connection_export[3]
+leds[4] <= nios:u0.led_external_connection_export[4]
+leds[5] <= nios:u0.led_external_connection_export[5]
+leds[6] <= nios:u0.led_external_connection_export[6]
+leds[7] <= nios:u0.led_external_connection_export[7]
 
 
 |top|nios:u0
