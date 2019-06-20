@@ -1,0 +1,29 @@
+|user_hardware
+load[0] => ~NO_FANOUT~
+load[1] => ~NO_FANOUT~
+load[2] => ~NO_FANOUT~
+load[3] => ~NO_FANOUT~
+load[4] => ~NO_FANOUT~
+load[5] => ~NO_FANOUT~
+load[6] => ~NO_FANOUT~
+load[7] => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+reg_0[0] <= reg_0[0].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[1] <= reg_0[1].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[2] <= reg_0[2].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[3] <= reg_0[3].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[4] <= reg_0[4].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[5] <= reg_0[5].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[6] <= reg_0[6].DB_MAX_OUTPUT_PORT_TYPE
+reg_0[7] <= reg_0[7].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+reg_1[1] <= reg_1[1].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[2] <= reg_1[2].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[3] <= reg_1[3].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[4] <= reg_1[4].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[5] <= reg_1[5].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[6] <= reg_1[6].DB_MAX_OUTPUT_PORT_TYPE
+reg_1[7] <= reg_1[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
