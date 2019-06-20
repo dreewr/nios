@@ -35,7 +35,7 @@ module nios_onchip_memory2_0 (
                              )
 ;
 
-  parameter INIT_FILE = "nios_onchip_memory2_0.hex";
+  parameter INIT_FILE = "C:SERSSERDOCUMENTSIOS_REPOIOSSOFTWAREIOSMEM_INITIOS_ONCHIP_MEMORY2_0.HEX";
 
 
   output  [ 31: 0] readdata;

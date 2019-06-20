@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'nios'
- * SOPC Builder design path: C:/Users/User/Documents/nios/nios.sopcinfo
+ * SOPC Builder design path: C:/Users/User/Documents/nios_repo/nios/nios.sopcinfo
  *
- * Generated: Tue Jun 18 01:51:46 BRT 2019
+ * Generated: Wed Jun 19 00:32:17 BRT 2019
  */
 
 /*
