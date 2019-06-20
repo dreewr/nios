@@ -24,7 +24,8 @@ architecture behave of top is
             clk_clk                        : in  std_logic                   ; -- clk
             led_external_connection_export : out std_logic_vector(7 downto 0);        -- export
             rs232_external_connection_rxd  : in  std_logic                    := 'X'; -- rxd
-            rs232_external_connection_txd  : out std_logic                            -- txd
+            rs232_external_connection_txd  : out std_logic                          ;  -- txd
+				pio_0_external_connection_export : in  std_logic_vector(7 downto 0) := (others => 'X')  -- export
         );
     end component nios;
 
@@ -35,7 +36,7 @@ architecture behave of top is
 
 	
 	--Sinais counter_01
-	--signal init_ram_clk: std_logic; -- saída 1 do divisor
+	signal test: std_logic_vector(7 downto 0); -- saída 1 do divisor
 	
 	begin
 	
@@ -46,7 +47,8 @@ architecture behave of top is
             clk_clk                        => clk,                        --                      clk.clk
             led_external_connection_export => leds, --  led_external_connection.export
             rs232_external_connection_rxd  => rx,  -- rs232_external_connection.rxd
-            rs232_external_connection_txd  => tx   --                          .txd
+            rs232_external_connection_txd  => tx,   --                          .txd
+				pio_0_external_connection_export => test  -- pio_0_external_connection.export
         );
 	
 process (rst, clk) ------------------------------------------ PROCESSO

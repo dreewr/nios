@@ -52,6 +52,14 @@
          type = "int";
       }
    }
+   element pio
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
    element rs232
    {
       datum _sortIndex
@@ -60,11 +68,11 @@
          type = "int";
       }
    }
-   element onchip_memory2_0.s1
+   element rs232.s1
    {
       datum baseAddress
       {
-         value = "8192";
+         value = "20480";
          type = "String";
       }
    }
@@ -76,11 +84,11 @@
          type = "String";
       }
    }
-   element rs232.s1
+   element onchip_memory2_0.s1
    {
       datum baseAddress
       {
-         value = "20480";
+         value = "8192";
          type = "String";
       }
    }
@@ -99,7 +107,7 @@
  <parameter name="projectName" value="nios.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1560915669356" />
+ <parameter name="timeStamp" value="1561068285547" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -111,6 +119,11 @@
  <interface
    name="rs232_external_connection"
    internal="rs232.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_0_external_connection"
+   internal="pio.external_connection"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
@@ -225,7 +238,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x2000' end='0x4000' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x4800' end='0x5000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x2000' end='0x4000' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x4800' end='0x5000' /><slave name='rs232.s1' start='0x5000' end='0x5020' /><slave name='led.s1' start='0x5020' end='0x5030' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='pio.s1' start='0x0' end='0x10' /><slave name='onchip_memory2_0.s1' start='0x2000' end='0x4000' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x4800' end='0x5000' /><slave name='rs232.s1' start='0x5000' end='0x5020' /><slave name='led.s1' start='0x5020' end='0x5030' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone II" />
   <parameter name="internalIrqMaskSystemInfo" value="1" />
@@ -291,6 +304,20 @@
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
   <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module kind="altera_avalon_pio" version="13.0.1.99.2" enabled="1" name="pio">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="false" />
   <parameter name="irqType" value="LEVEL" />
@@ -386,6 +413,17 @@
    version="13.0"
    start="nios2_qsys_0.jtag_debug_module_reset"
    end="clk_0.clk_in_reset" />
+ <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="pio.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="pio.clk" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>
