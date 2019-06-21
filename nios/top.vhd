@@ -13,7 +13,8 @@ entity top is
 		clk,rst: in std_logic;
 		rx: in std_logic;
 		tx: out std_logic;
-		leds: out std_logic_vector(7 downto 0)
+		leds: out std_logic_vector(7 downto 0);
+		test_led: out std_logic
 	);
 end entity;
 
@@ -25,7 +26,8 @@ architecture behave of top is
             led_external_connection_export : out std_logic_vector(7 downto 0);        -- export
             rs232_external_connection_rxd  : in  std_logic                    := 'X'; -- rxd
             rs232_external_connection_txd  : out std_logic                          ;  -- txd
-				pio_0_external_connection_export : in  std_logic_vector(7 downto 0) := (others => 'X')  -- export
+				pio_0_external_connection_in_port  : in  std_logic_vector(7 downto 0) := (others => 'X'); -- in_port
+            pio_0_external_connection_out_port : out std_logic_vector(7 downto 0)                     -- out_port
         );
     end component nios;
 
@@ -36,7 +38,8 @@ architecture behave of top is
 
 	
 	--Sinais counter_01
-	signal test: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal pio_in: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal pio_out: std_logic_vector(7 downto 0); -- saída 1 do divisor
 	
 	begin
 	
@@ -48,17 +51,21 @@ architecture behave of top is
             led_external_connection_export => leds, --  led_external_connection.export
             rs232_external_connection_rxd  => rx,  -- rs232_external_connection.rxd
             rs232_external_connection_txd  => tx,   --                          .txd
-				pio_0_external_connection_export => test  -- pio_0_external_connection.export
+				--
+				pio_0_external_connection_in_port  => pio_in,  -- pio_0_external_connection.in_port
+            pio_0_external_connection_out_port => pio_out  --                          .out_port
         );
 	
 process (rst, clk) ------------------------------------------ PROCESSO
 	
 	begin --Process code
 	
-	if rst = '1' then
-	--Código de reset
+	--if rst = '1' then
 	
-	elsif clk' event and clk = '1' then
+	if clk' event and clk = '1' then
+		
+		test_led <= pio_out(1); -- 7 ok
+	
 		
 	end if;
 end process;

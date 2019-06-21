@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="niosP1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|HostSystem|HostSystem_memory:memory|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_vcc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HostSystem|HostSystem_nios2_qsys_0:nios2_qsys_0|HostSystem_nios2_qsys_0_register_bank_a_module:HostSystem_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_j7h1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HostSystem|HostSystem_nios2_qsys_0:nios2_qsys_0|HostSystem_nios2_qsys_0_register_bank_b_module:HostSystem_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_k7h1.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

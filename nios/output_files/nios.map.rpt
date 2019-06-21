@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nios
-Thu Jun 20 19:19:35 2019
+Fri Jun 21 01:42:39 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -111,9 +111,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 103. Port Connectivity Checks: "nios:u0|altera_merlin_master_translator:nios2_qsys_0_instruction_master_translator"
 104. Port Connectivity Checks: "nios:u0|nios_rs232:rs232"
 105. Port Connectivity Checks: "nios:u0|nios_nios2_qsys_0:nios2_qsys_0"
-106. Elapsed Time Per Partition
-107. Analysis & Synthesis Messages
-108. Analysis & Synthesis Suppressed Messages
+106. Port Connectivity Checks: "nios:u0"
+107. Elapsed Time Per Partition
+108. Analysis & Synthesis Messages
+109. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -139,16 +140,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 20 19:19:34 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 21 01:42:39 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; nios                                            ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 3,360                                           ;
-;     Total combinational functions  ; 2,758                                           ;
-;     Dedicated logic registers      ; 2,014                                           ;
-; Total registers                    ; 2014                                            ;
-; Total pins                         ; 12                                              ;
+; Total logic elements               ; 3,365                                           ;
+;     Total combinational functions  ; 2,762                                           ;
+;     Dedicated logic registers      ; 2,016                                           ;
+; Total registers                    ; 2016                                            ;
+; Total pins                         ; 13                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 127,488                                         ;
 ; Embedded Multiplier 9-bit elements ; 4                                               ;
@@ -341,29 +342,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 3,360  ;
+; Estimated Total logic elements              ; 3,365  ;
 ;                                             ;        ;
-; Total combinational functions               ; 2758   ;
+; Total combinational functions               ; 2762   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 1329   ;
-;     -- 3 input functions                    ; 987    ;
-;     -- <=2 input functions                  ; 442    ;
+;     -- 4 input functions                    ; 1340   ;
+;     -- 3 input functions                    ; 982    ;
+;     -- <=2 input functions                  ; 440    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 2614   ;
+;     -- normal mode                          ; 2618   ;
 ;     -- arithmetic mode                      ; 144    ;
 ;                                             ;        ;
-; Total registers                             ; 2014   ;
-;     -- Dedicated logic registers            ; 2014   ;
+; Total registers                             ; 2016   ;
+;     -- Dedicated logic registers            ; 2016   ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 12     ;
+; I/O pins                                    ; 13     ;
 ; Total memory bits                           ; 127488 ;
 ; Embedded Multiplier 9-bit elements          ; 4      ;
 ; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 2041   ;
-; Total fan-out                               ; 20470  ;
-; Average fan-out                             ; 4.06   ;
+; Maximum fan-out                             ; 2043   ;
+; Total fan-out                               ; 20501  ;
+; Average fan-out                             ; 4.07   ;
 +---------------------------------------------+--------+
 
 
@@ -372,8 +373,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                                                                                            ; 2758 (1)          ; 2014 (0)     ; 127488      ; 4            ; 0       ; 2         ; 12   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                               ; work         ;
-;    |nios:u0|                                                                                                    ; 2472 (0)          ; 1845 (0)     ; 127488      ; 4            ; 0       ; 2         ; 0    ; 0            ; |top|nios:u0                                                                                                                                                                                                                                                                                                                                       ; work         ;
+; |top                                                                                                            ; 2762 (1)          ; 2016 (1)     ; 127488      ; 4            ; 0       ; 2         ; 13   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                               ; work         ;
+;    |nios:u0|                                                                                                    ; 2476 (0)          ; 1846 (0)     ; 127488      ; 4            ; 0       ; 2         ; 0    ; 0            ; |top|nios:u0                                                                                                                                                                                                                                                                                                                                       ; work         ;
 ;       |altera_avalon_sc_fifo:led_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                         ; 5 (5)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_avalon_sc_fifo:led_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                                                       ; work         ;
 ;       |altera_avalon_sc_fifo:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo| ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_avalon_sc_fifo:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                               ; work         ;
 ;       |altera_avalon_sc_fifo:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|            ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_avalon_sc_fifo:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                                          ; work         ;
@@ -383,10 +384,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |altera_merlin_master_agent:nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_master_agent:nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent                                                                                                                                                                                                                                 ; work         ;
 ;       |altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent                                                                                                                                                                                                                                    ; work         ;
 ;       |altera_merlin_slave_agent:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_agent:onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent                                                                                                                                                                                                                                               ; work         ;
-;       |altera_merlin_slave_translator:led_s1_translator|                                                        ; 10 (10)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:led_s1_translator                                                                                                                                                                                                                                                                                      ; work         ;
+;       |altera_merlin_slave_translator:led_s1_translator|                                                        ; 9 (9)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:led_s1_translator                                                                                                                                                                                                                                                                                      ; work         ;
 ;       |altera_merlin_slave_translator:nios2_qsys_0_jtag_debug_module_translator|                                ; 1 (1)             ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:nios2_qsys_0_jtag_debug_module_translator                                                                                                                                                                                                                                                              ; work         ;
 ;       |altera_merlin_slave_translator:onchip_memory2_0_s1_translator|                                           ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:onchip_memory2_0_s1_translator                                                                                                                                                                                                                                                                         ; work         ;
-;       |altera_merlin_slave_translator:pio_s1_translator|                                                        ; 7 (7)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:pio_s1_translator                                                                                                                                                                                                                                                                                      ; work         ;
+;       |altera_merlin_slave_translator:pio_s1_translator|                                                        ; 8 (8)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:pio_s1_translator                                                                                                                                                                                                                                                                                      ; work         ;
 ;       |altera_merlin_slave_translator:rs232_s1_translator|                                                      ; 7 (7)             ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_slave_translator:rs232_s1_translator                                                                                                                                                                                                                                                                                    ; work         ;
 ;       |altera_merlin_traffic_limiter:limiter_001|                                                               ; 12 (12)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_traffic_limiter:limiter_001                                                                                                                                                                                                                                                                                             ; work         ;
 ;       |altera_merlin_traffic_limiter:limiter|                                                                   ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|altera_merlin_traffic_limiter:limiter                                                                                                                                                                                                                                                                                                 ; work         ;
@@ -401,7 +402,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |nios_cmd_xbar_mux:cmd_xbar_mux|                                                                          ; 54 (50)           ; 5 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_cmd_xbar_mux:cmd_xbar_mux                                                                                                                                                                                                                                                                                                        ; work         ;
 ;          |altera_merlin_arbitrator:arb|                                                                         ; 4 (4)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb                                                                                                                                                                                                                                                                           ; work         ;
 ;       |nios_led:led|                                                                                            ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_led:led                                                                                                                                                                                                                                                                                                                          ; work         ;
-;       |nios_nios2_qsys_0:nios2_qsys_0|                                                                          ; 2025 (1659)       ; 1616 (1299)  ; 61952       ; 4            ; 0       ; 2         ; 0    ; 0            ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0                                                                                                                                                                                                                                                                                                        ; work         ;
+;       |nios_nios2_qsys_0:nios2_qsys_0|                                                                          ; 2026 (1660)       ; 1616 (1299)  ; 61952       ; 4            ; 0       ; 2         ; 0    ; 0            ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0                                                                                                                                                                                                                                                                                                        ; work         ;
 ;          |lpm_add_sub:Add18|                                                                                    ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|lpm_add_sub:Add18                                                                                                                                                                                                                                                                                      ; work         ;
 ;             |add_sub_8ri:auto_generated|                                                                        ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|lpm_add_sub:Add18|add_sub_8ri:auto_generated                                                                                                                                                                                                                                                           ; work         ;
 ;          |nios_nios2_qsys_0_bht_module:nios_nios2_qsys_0_bht|                                                   ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_bht_module:nios_nios2_qsys_0_bht                                                                                                                                                                                                                                                     ; work         ;
@@ -464,6 +465,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |nios_onchip_memory2_0:onchip_memory2_0|                                                                  ; 2 (2)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_onchip_memory2_0:onchip_memory2_0                                                                                                                                                                                                                                                                                                ; work         ;
 ;          |altsyncram:the_altsyncram|                                                                            ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram                                                                                                                                                                                                                                                                      ; work         ;
 ;             |altsyncram_hih1:auto_generated|                                                                    ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hih1:auto_generated                                                                                                                                                                                                                                       ; work         ;
+;       |nios_pio:pio|                                                                                            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_pio:pio                                                                                                                                                                                                                                                                                                                          ; work         ;
 ;       |nios_rs232:rs232|                                                                                        ; 122 (0)           ; 92 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_rs232:rs232                                                                                                                                                                                                                                                                                                                      ; work         ;
 ;          |nios_rs232_regs:the_nios_rs232_regs|                                                                  ; 38 (38)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_rs232:rs232|nios_rs232_regs:the_nios_rs232_regs                                                                                                                                                                                                                                                                                  ; work         ;
 ;          |nios_rs232_rx:the_nios_rs232_rx|                                                                      ; 48 (48)           ; 37 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|nios:u0|nios_rs232:rs232|nios_rs232_rx:the_nios_rs232_rx                                                                                                                                                                                                                                                                                      ; work         ;
@@ -581,6 +583,7 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; nios:u0|nios_cmd_xbar_mux:cmd_xbar_mux_001|locked[0,1]                                                                                                                                                                                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|nios_cmd_xbar_mux:cmd_xbar_mux|locked[0,1]                                                                                                                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
+; nios:u0|altera_merlin_slave_translator:pio_s1_translator|av_chipselect_pre                                                                                                                                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|altera_merlin_slave_translator:led_s1_translator|av_readdata_pre[8..31]                                                                                                                                                                                                               ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|altera_merlin_slave_translator:led_s1_translator|av_chipselect_pre                                                                                                                                                                                                                    ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|altera_merlin_slave_translator:rs232_s1_translator|av_chipselect_pre                                                                                                                                                                                                                  ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
@@ -729,10 +732,8 @@ Encoding Type:  One-Hot
 ; nios:u0|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_busy                                                                                                                ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|altera_merlin_slave_agent:nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[0,2]                                                                                                   ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_nios2_oci:the_nios_nios2_qsys_0_nios2_oci|nios_nios2_qsys_0_nios2_oci_dbrk:the_nios_nios2_qsys_0_nios2_oci_dbrk|dbrk_break                                                                                                           ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
-; nios:u0|nios_pio:pio|readdata[1..7]                                                                                                                                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
-; nios:u0|altera_merlin_slave_translator:pio_s1_translator|av_readdata_pre[1..7]                                                                                                                                                                                                                ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
-; nios:u0|nios_pio:pio|readdata[0]                                                                                                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
-; nios:u0|altera_merlin_slave_translator:pio_s1_translator|av_readdata_pre[0]                                                                                                                                                                                                                   ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
+; nios:u0|nios_pio:pio|readdata[0..7]                                                                                                                                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
+; nios:u0|altera_merlin_slave_translator:pio_s1_translator|av_readdata_pre[0..7]                                                                                                                                                                                                                ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_nios2_oci:the_nios_nios2_qsys_0_nios2_oci|nios_nios2_qsys_0_nios2_oci_break:the_nios_nios2_qsys_0_nios2_oci_break|trigbrktype                                                                                                        ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
 ; nios:u0|altera_reset_controller:rst_controller|r_early_rst                                                                                                                                                                                                                                    ; Merged with nios:u0|altera_reset_controller:rst_controller|r_sync_rst_dly                                                                                                                                                                                                                                 ;
 ; nios:u0|altera_avalon_sc_fifo:rs232_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[1][88]                                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
@@ -755,7 +756,7 @@ Encoding Type:  One-Hot
 ; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_nios2_oci:the_nios_nios2_qsys_0_nios2_oci|nios_nios2_qsys_0_jtag_debug_module_wrapper:the_nios_nios2_qsys_0_jtag_debug_module_wrapper|nios_nios2_qsys_0_jtag_debug_module_tck:the_nios_nios2_qsys_0_jtag_debug_module_tck|DRsize.101 ; Lost fanout                                                                                                                                                                                                                                                                                               ;
 ; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_nios2_oci:the_nios_nios2_qsys_0_nios2_oci|nios_nios2_qsys_0_jtag_debug_module_wrapper:the_nios_nios2_qsys_0_jtag_debug_module_wrapper|nios_nios2_qsys_0_jtag_debug_module_tck:the_nios_nios2_qsys_0_jtag_debug_module_tck|DRsize.011 ; Merged with nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_nios2_oci:the_nios_nios2_qsys_0_nios2_oci|nios_nios2_qsys_0_jtag_debug_module_wrapper:the_nios_nios2_qsys_0_jtag_debug_module_wrapper|nios_nios2_qsys_0_jtag_debug_module_tck:the_nios_nios2_qsys_0_jtag_debug_module_tck|DRsize.001 ;
 ; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_nios2_oci:the_nios_nios2_qsys_0_nios2_oci|nios_nios2_qsys_0_jtag_debug_module_wrapper:the_nios_nios2_qsys_0_jtag_debug_module_wrapper|nios_nios2_qsys_0_jtag_debug_module_tck:the_nios_nios2_qsys_0_jtag_debug_module_tck|DRsize.001 ; Stuck at GND due to stuck port data_in                                                                                                                                                                                                                                                                    ;
-; Total Number of Removed Registers = 340                                                                                                                                                                                                                                                       ;                                                                                                                                                                                                                                                                                                           ;
+; Total Number of Removed Registers = 341                                                                                                                                                                                                                                                       ;                                                                                                                                                                                                                                                                                                           ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -939,10 +940,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2014  ;
+; Total registers                              ; 2016  ;
 ; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 252   ;
-; Number of registers using Asynchronous Clear ; 1633  ;
+; Number of registers using Asynchronous Clear ; 1634  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1223  ;
 ; Number of registers using Preset             ; 0     ;
@@ -956,13 +957,13 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; nios:u0|nios_rs232:rs232|nios_rs232_tx:the_nios_rs232_tx|txd                                                                                                                                ; 1       ;
 ; nios:u0|nios_rs232:rs232|nios_rs232_tx:the_nios_rs232_tx|pre_txd                                                                                                                            ; 2       ;
-; nios:u0|altera_reset_controller:rst_controller|r_sync_rst                                                                                                                                   ; 222     ;
+; nios:u0|altera_reset_controller:rst_controller|r_sync_rst                                                                                                                                   ; 223     ;
 ; nios:u0|altera_reset_controller:rst_controller|r_sync_rst_chain[1]                                                                                                                          ; 2       ;
 ; nios:u0|altera_reset_controller:rst_controller|r_sync_rst_dly                                                                                                                               ; 33      ;
 ; nios:u0|altera_merlin_master_agent:nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent|hold_waitrequest                                                              ; 19      ;
 ; nios:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer_int_chain[2]                                                                                                       ; 1       ;
-; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|M_pipe_flush                                                                                                                                         ; 42      ;
 ; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|hbreak_enabled                                                                                                                                       ; 10      ;
+; nios:u0|nios_nios2_qsys_0:nios2_qsys_0|M_pipe_flush                                                                                                                                         ; 42      ;
 ; nios:u0|nios_cmd_xbar_mux:cmd_xbar_mux|altera_merlin_arbitrator:arb|top_priority_reg[0]                                                                                                     ; 2       ;
 ; nios:u0|nios_cmd_xbar_mux:cmd_xbar_mux_001|altera_merlin_arbitrator:arb|top_priority_reg[0]                                                                                                 ; 2       ;
 ; nios:u0|nios_rs232:rs232|nios_rs232_tx:the_nios_rs232_tx|tx_ready                                                                                                                           ; 6       ;
@@ -1038,16 +1039,6 @@ Encoding Type:  One-Hot
 ; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|A_wr_data_unfiltered[1]                                                                                                                                                                                                                            ;
 ; 6:1                ; 10 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |top|nios:u0|nios_nios2_qsys_0:nios2_qsys_0|F_ic_tag_rd_addr_nxt[1]                                                                                                                                                                                                                            ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 48 LEs               ; 4 LEs                  ; Yes        ; |top|pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|PUDL0439:ESUL0435|YROJ4113[2]                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                                                                                                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                                                                                                                                                           ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[2][0]                                                                                                                                                                                                               ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]                                                                                                                                                                                                               ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4]                                                                                                                                                                                     ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[2][1]                                                                                                                                                                                                        ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                                                                                                                                                                                                        ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                                                                                                                                                 ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                                                                                                                                          ;
-; 28:1               ; 4 bits    ; 72 LEs        ; 52 LEs               ; 20 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                                                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2612,9 +2603,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------+--------+----------+---------------------------------------+
 ; Port                     ; Type   ; Severity ; Details                               ;
 +--------------------------+--------+----------+---------------------------------------+
-; av_write                 ; Output ; Info     ; Explicitly unconnected                ;
 ; av_read                  ; Output ; Info     ; Explicitly unconnected                ;
-; av_writedata             ; Output ; Info     ; Explicitly unconnected                ;
 ; av_begintransfer         ; Output ; Info     ; Explicitly unconnected                ;
 ; av_beginbursttransfer    ; Output ; Info     ; Explicitly unconnected                ;
 ; av_burstcount            ; Output ; Info     ; Explicitly unconnected                ;
@@ -2623,7 +2612,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; av_waitrequest           ; Input  ; Info     ; Stuck at GND                          ;
 ; av_writebyteenable       ; Output ; Info     ; Explicitly unconnected                ;
 ; av_lock                  ; Output ; Info     ; Explicitly unconnected                ;
-; av_chipselect            ; Output ; Info     ; Explicitly unconnected                ;
 ; av_clken                 ; Output ; Info     ; Explicitly unconnected                ;
 ; uav_clken                ; Input  ; Info     ; Stuck at GND                          ;
 ; av_debugaccess           ; Output ; Info     ; Explicitly unconnected                ;
@@ -2803,15 +2791,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+---------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:09     ;
-; sld_hub:auto_hub ; 00:00:00     ;
-; pzdyqx:nabboc    ; 00:00:00     ;
-+------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nios:u0"                                                                                                                ;
++------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                                     ; Type   ; Severity ; Details                                                                             ;
++------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; pio_0_external_connection_out_port[7..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pio_0_external_connection_out_port[0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:10     ;
+; pzdyqx:nabboc  ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -2820,9 +2817,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 20 19:19:09 2019
+    Info: Processing started: Fri Jun 21 01:42:16 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nios -c nios
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/user_hardware/user_hardware.vhd
+    Info (12022): Found design unit 1: user_hardware-behave
+    Info (12023): Found entity 1: user_hardware
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/counter_8bits/counter8b.vhd
+    Info (12022): Found design unit 1: counter8b-behave
+    Info (12023): Found entity 1: counter8b
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/counter_01/counter_01.vhd
+    Info (12022): Found design unit 1: counter_01-behave
+    Info (12023): Found entity 1: counter_01
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/control_register/control_register.vhd
+    Info (12022): Found design unit 1: control_register-behave
+    Info (12023): Found entity 1: control_register
 Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_pio.v
     Info (12023): Found entity 1: nios_pio
 Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rsp_xbar_mux_001.sv
@@ -2938,7 +2947,7 @@ Warning (10037): Verilog HDL or VHDL warning at nios_nios2_qsys_0.v(2076): condi
 Warning (10037): Verilog HDL or VHDL warning at nios_nios2_qsys_0.v(2232): conditional expression evaluates to a constant
 Warning (10037): Verilog HDL or VHDL warning at nios_nios2_qsys_0.v(3060): conditional expression evaluates to a constant
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at top.vhd(39): used implicit default value for signal "test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top.vhd(41): used implicit default value for signal "pio_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "nios" for hierarchy "nios:u0"
 Info (12128): Elaborating entity "nios_nios2_qsys_0" for hierarchy "nios:u0|nios_nios2_qsys_0:nios2_qsys_0"
 Info (12128): Elaborating entity "nios_nios2_qsys_0_test_bench" for hierarchy "nios:u0|nios_nios2_qsys_0:nios2_qsys_0|nios_nios2_qsys_0_test_bench:the_nios_nios2_qsys_0_test_bench"
@@ -3156,26 +3165,22 @@ Info (265071): Evaluation period of megafunction that supports OpenCore Plus fea
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (17049): 24 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/nios_repo/nios/output_files/nios.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rst"
-Info (21057): Implemented 3904 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3910 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 3640 logic cells
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 3645 logic cells
     Info (21064): Implemented 243 RAM segments
     Info (21062): Implemented 4 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4742 megabytes
-    Info: Processing ended: Thu Jun 20 19:19:35 2019
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4750 megabytes
+    Info: Processing ended: Fri Jun 21 01:42:39 2019
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

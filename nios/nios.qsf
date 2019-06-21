@@ -51,11 +51,11 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_N2 -to clk
-set_location_assignment PIN_C25 -to rx
-set_location_assignment PIN_B25 -to tx
+set_location_assignment PIN_T19 -to rx
+set_location_assignment PIN_R19 -to tx
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_AC21 -to leds[7]
+set_location_assignment PIN_AD12 -to leds[7]
 set_location_assignment PIN_AE12 -to leds[6]
 set_location_assignment PIN_AE13 -to leds[5]
 set_location_assignment PIN_AF13 -to leds[4]
@@ -63,6 +63,12 @@ set_location_assignment PIN_AE15 -to leds[3]
 set_location_assignment PIN_AD15 -to leds[2]
 set_location_assignment PIN_AC14 -to leds[1]
 set_location_assignment PIN_AA13 -to leds[0]
+set_location_assignment PIN_AE23 -to test_led
+set_location_assignment PIN_V2 -to rst
+set_global_assignment -name VHDL_FILE vhdl/user_hardware/user_hardware.vhd
+set_global_assignment -name VHDL_FILE vhdl/counter_8bits/counter8b.vhd
+set_global_assignment -name VHDL_FILE vhdl/counter_01/counter_01.vhd
+set_global_assignment -name VHDL_FILE vhdl/control_register/control_register.vhd
 set_global_assignment -name VERILOG_FILE nios/synthesis/submodules/nios_pio.v
 set_global_assignment -name SYSTEMVERILOG_FILE nios/synthesis/submodules/nios_rsp_xbar_mux_001.sv
 set_global_assignment -name SYSTEMVERILOG_FILE nios/synthesis/submodules/nios_rsp_xbar_mux.sv
