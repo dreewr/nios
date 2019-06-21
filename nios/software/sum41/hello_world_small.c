@@ -92,19 +92,22 @@ void delay(int a){
 
 int main()
 { 
-	char a;
-	int b = 0;
+
   /* Event loop never exits. */
   while (1){
-	  printf("hello from Uart! \n");
+	  	char a;
 
-	  a = IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE);
+	  	int b = 0;
 
-	  	IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,b++);
+	  	a = IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE);
+
+	  	b = (int)a-48;
 
 	  	IOWR_ALTERA_AVALON_PIO_DATA(PIO_BASE,b++);
 
-	  	delay(1);
+	  	IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,b++);
+
+	  	delay(20);
   }
 
   return 0;
