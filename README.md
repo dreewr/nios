@@ -23,10 +23,16 @@ Observações: o projeto user_harware está presente no repositório para aceler
 
   - Modificações
     - Em sala de aula foi estipulado alguns "workarounds" para o problema do UART não receber a primeira palavra. Todavia, escrevemos o código em C que faz essa verificação a nível de usuário, esperando um comando de inicialização e informando o usuário das operações de dados sendo feitas
-    - O notebook usado para desenvolvimento não reconhecia a porta COM para comunicação serial, mesmo com tentativas frustradas de instalação de drivers. Para solucionar o problema usamos o componente YP-05, configurando os pinos de tx e rx da FPGA e fazendo a conexão. 
     
+   -Problemas encontrados e workarounds:
+      - O tutorial sugerido, mesmo após incessantes tentativas e troubleshootings não pareceu funcionar no nosso ambiente. O tutorial usado para dar o quickstart do projeto
+      - Ao reiniciar o quart
+    
+    - O notebook usado para desenvolvimento não reconhecia a porta COM para comunicação serial, mesmo com tentativas frustradas de instalação de drivers. Para solucionar o problema usamos o componente YP-05, configurando os pinos de tx e rx da FPGA e fazendo a conexão. 
+    <img src = "/serial_2.jpeg"  width="600" height="300">
 -> TODOS:
   - Finalização da lógica do userHardware
   - Inclusão do userHardware no topLevel do projeto nios
   - Modelsim e testes finais 
+  
   
