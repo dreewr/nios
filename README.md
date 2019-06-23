@@ -12,13 +12,21 @@ Observações: o projeto user_harware está presente no repositório para aceler
 
   ->Estrutura do projeto consiste em:
    - Componente do Nios criado pelo Qsys e controlado por um código em C
-   - Componente userHardware que se comunica com o Nios
-      - Composto por um registrador de controle
-      - Um contador de 8 bits
+      - PIO READTDATA 8 bits
+      - PIO WRITEDATA 8 bits
+      - PIO COMMAND 3 bits (comandos CS, WR e RD)
+ 
+  - Componente userHardware que se comunica com o Nios
+      - Composto por um registrador de controle que recebe como entrada os dados dos barramentos do nios e aos comandos 
+      - Um contador de 8 bits incremental
       - Um contador de 0s e 1s a partir de um input de dados
 
+  - Modificações
+    - Em sala de aula foi estipulado alguns "workarounds" para o problema do UART não receber a primeira palavra. Todavia, escrevemos o código em C que faz essa verificação a nível de usuário, esperando um comando de inicialização e informando o usuário das operações de dados sendo feitas
+    - O notebook usado para desenvolvimento não reconhecia a porta COM para comunicação serial, mesmo com tentativas frustradas de instalação de drivers. Para solucionar o problema usamos o componente YP-05, configurando os pinos de tx e rx da FPGA e fazendo a conexão. 
+    
 -> TODOS:
-  - Finalização da lógica do registrador 
-  - Debug do recebimento e transmissão de dados pela UART(testar usando placa FTDI), driver do notebook não reconhece a porta COM.
+  - Finalização da lógica do userHardware
+  - Inclusão do userHardware no topLevel do projeto nios
   - Modelsim e testes finais 
   
