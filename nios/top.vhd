@@ -75,12 +75,18 @@ process (rst, clk) ------------------------------------------ PROCESSO
 	
 	if clk' event and clk = '1' then
 		
-		test_led <= writedata_out(1); -- 7 ok
+		--test_led <= writedata_out(1); -- 7 ok
 		
 		--Teste: Envia ReadData
 		
-		readdata_in <= "11001100";
-	
+		
+		if command_out > "000" then
+		
+			test_led <= '0';
+			
+			readdata_in <= "11001100";
+		
+		end if;
 		
 	end if;
 end process;
