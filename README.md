@@ -28,7 +28,7 @@ Observações: o projeto user_harware está presente no repositório para aceler
     <img src = "/realterm2.png"  width="1000" height="500">
     
    - Problemas encontrados e workarounds:
-      - O tutorial sugerido, mesmo após incessantes tentativas e troubleshootings não pareceu funcionar no nosso ambiente. O tutorial usado para dar o quickstart do projeto foi esse (https:// https://www.youtube.com/watch?v=nHFVwthr_Ew), mas com a diferença de que os códigos usados para o top level são em VHDL e não em Verilog, para possibilitar a integração com outros componentes
+      - O tutorial sugerido, mesmo após incessantes tentativas e troubleshootings não pareceu funcionar no nosso ambiente. O tutorial usado para dar o quickstart do projeto foi [esse](https://www.youtube.com/watch?v=nHFVwthr_Ew), mas com a diferença de que os códigos usados para o top level são em VHDL e não em Verilog, para possibilitar a integração com outros componentes
       - Ao reiniciar o quartus e tentar relançar o projeto em C pelo eclipse, ocorreu o erro ao dar Run no projeto. As duas soluções que pareceram funcionar consistentamente foram
           - Gerar novamente os componentes do Qsys e adicionar ao projeto novamente e recriar o projeto no eclipse
           - Reiniciar a máquina e fazer todos os procedimentos de load na FPGA
