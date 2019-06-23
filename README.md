@@ -20,8 +20,10 @@ Observações: o projeto user_harware está presente no repositório para aceler
       - Composto por um registrador de controle que recebe como entrada os dados dos barramentos do nios e aos comandos 
       - Um contador de 8 bits incremental
       - Um contador de 0s e 1s a partir de um input de dados
-
-  - Modificações
+ 
+ - [Demo da integração do componente Qsys](https://youtu.be/QbR8crQcPQM)
+ 
+ - Modificações
     - Em sala de aula foi estipulado alguns "workarounds" para o problema do UART não receber a primeira palavra. Todavia, escrevemos o código em C que faz essa verificação a nível de usuário, esperando um comando de inicialização e informando o usuário das operações de dados sendo feitas
     <img src = "/realterm2.png"  width="1000" height="500">
     
