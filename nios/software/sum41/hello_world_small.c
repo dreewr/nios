@@ -92,12 +92,10 @@ void delay(int a){
 
 int main()
 { 
-
+	char a;
+	int b = 0;
   /* Event loop never exits. */
   while (1){
-	  	char a;
-
-	  	int b = 0;
 
 	  	a = IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE);
 

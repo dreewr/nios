@@ -26,8 +26,12 @@ architecture behave of top is
             led_external_connection_export : out std_logic_vector(7 downto 0);        -- export
             rs232_external_connection_rxd  : in  std_logic                    := 'X'; -- rxd
             rs232_external_connection_txd  : out std_logic                          ;  -- txd
-				pio_0_external_connection_in_port  : in  std_logic_vector(7 downto 0) := (others => 'X'); -- in_port
-            pio_0_external_connection_out_port : out std_logic_vector(7 downto 0)                     -- out_port
+				writedata_external_connection_in_port   : in  std_logic_vector(7 downto 0) := (others => 'X'); -- in_port
+            writedata_external_connection_out_port  : out std_logic_vector(7 downto 0);                    -- out_port
+            readdata_external_connection_1_in_port  : in  std_logic_vector(7 downto 0) := (others => 'X'); -- in_port
+            readdata_external_connection_1_out_port : out std_logic_vector(7 downto 0);                    -- out_port
+            command_external_connection_in_port     : in  std_logic_vector(2 downto 0) := (others => 'X'); -- in_port
+            command_external_connection_out_port    : out std_logic_vector(2 downto 0)                     -- out_port
         );
     end component nios;
 
@@ -38,8 +42,12 @@ architecture behave of top is
 
 	
 	--Sinais counter_01
-	signal pio_in: std_logic_vector(7 downto 0); -- saída 1 do divisor
-	signal pio_out: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal command_in: std_logic_vector(2 downto 0); -- saída 1 do divisor
+	signal command_out: std_logic_vector(2 downto 0); -- saída 1 do divisor
+	signal writedata_in: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal writedata_out: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal readdata_in: std_logic_vector(7 downto 0); -- saída 1 do divisor
+	signal readdata_out: std_logic_vector(7 downto 0); -- saída 1 do divisor
 	
 	begin
 	
@@ -51,9 +59,12 @@ architecture behave of top is
             led_external_connection_export => leds, --  led_external_connection.export
             rs232_external_connection_rxd  => rx,  -- rs232_external_connection.rxd
             rs232_external_connection_txd  => tx,   --                          .txd
-				--
-				pio_0_external_connection_in_port  => pio_in,  -- pio_0_external_connection.in_port
-            pio_0_external_connection_out_port => pio_out  --                          .out_port
+				writedata_external_connection_in_port   => writedata_in,   --  writedata_external_connection.in_port
+            writedata_external_connection_out_port  => writedata_out,  --                               .out_port
+            readdata_external_connection_1_in_port  => readdata_in,  -- readdata_external_connection_1.in_port
+            readdata_external_connection_1_out_port => readdata_out, --                               .out_port
+            command_external_connection_in_port     => command_in,     --    command_external_connection.in_port
+            command_external_connection_out_port    => command_out     --                               .out_port
         );
 	
 process (rst, clk) ------------------------------------------ PROCESSO
@@ -64,7 +75,11 @@ process (rst, clk) ------------------------------------------ PROCESSO
 	
 	if clk' event and clk = '1' then
 		
-		test_led <= pio_out(1); -- 7 ok
+		test_led <= writedata_out(1); -- 7 ok
+		
+		--Teste: Envia ReadData
+		
+		readdata_in <= "11001100";
 	
 		
 	end if;

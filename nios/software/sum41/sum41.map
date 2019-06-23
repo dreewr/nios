@@ -71,7 +71,7 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
                 0x00002020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x00002020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x00002020      0x204
+.text           0x00002020      0x200
                 0x00002020                PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -118,131 +118,131 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x00002020       0x4c ../sum41_bsp//obj/HAL/src/crt0.o
                 0x00002020                _start
- .text          0x0000206c       0x78 obj/default/hello_world_small.o
+ .text          0x0000206c       0x74 obj/default/hello_world_small.o
                 0x0000206c                delay
                 0x000020a0                main
- .text          0x000020e4       0x8c ../sum41_bsp/\libhal_bsp.a(alt_load.o)
-                0x00002104                alt_load
- .text          0x00002170       0x2c ../sum41_bsp/\libhal_bsp.a(alt_main.o)
-                0x00002170                alt_main
- .text          0x0000219c       0x24 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000219c                alt_sys_init
-                0x000021a0                alt_irq_init
- .text          0x000021c0       0x18 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x000021c0                alt_dcache_flush_all
- .text          0x000021d8        0xc ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x000021d8                alt_icache_flush_all
- .text          0x000021e4        0x8 ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
-                0x000021e4                altera_nios2_qsys_irq_init
- .text          0x000021ec       0x38 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
-                0x000021ec                alt_icache_flush
+ .text          0x000020e0       0x8c ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+                0x00002100                alt_load
+ .text          0x0000216c       0x2c ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000216c                alt_main
+ .text          0x00002198       0x24 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00002198                alt_sys_init
+                0x0000219c                alt_irq_init
+ .text          0x000021bc       0x18 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000021bc                alt_dcache_flush_all
+ .text          0x000021d4        0xc ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x000021d4                alt_icache_flush_all
+ .text          0x000021e0        0x8 ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x000021e0                altera_nios2_qsys_irq_init
+ .text          0x000021e8       0x38 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+                0x000021e8                alt_icache_flush
  *(.gnu.warning.*)
  *(.fini)
-                0x00002224                PROVIDE (__etext, ABSOLUTE (.))
-                0x00002224                PROVIDE (_etext, ABSOLUTE (.))
-                0x00002224                PROVIDE (etext, ABSOLUTE (.))
+                0x00002220                PROVIDE (__etext, ABSOLUTE (.))
+                0x00002220                PROVIDE (_etext, ABSOLUTE (.))
+                0x00002220                PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x00002224                . = ALIGN (0x4)
-                0x00002224                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+                0x00002220                . = ALIGN (0x4)
+                0x00002220                PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
-                0x00002224                PROVIDE (__preinit_array_end, ABSOLUTE (.))
-                0x00002224                PROVIDE (__init_array_start, ABSOLUTE (.))
+                0x00002220                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x00002220                PROVIDE (__init_array_start, ABSOLUTE (.))
  *(.init_array)
-                0x00002224                PROVIDE (__init_array_end, ABSOLUTE (.))
-                0x00002224                PROVIDE (__fini_array_start, ABSOLUTE (.))
+                0x00002220                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x00002220                PROVIDE (__fini_array_start, ABSOLUTE (.))
  *(.fini_array)
-                0x00002224                PROVIDE (__fini_array_end, ABSOLUTE (.))
+                0x00002220                PROVIDE (__fini_array_end, ABSOLUTE (.))
  *(.eh_frame)
  *(.gcc_except_table)
  *(.dynamic)
-                0x00002224                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+                0x00002220                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
  *(.ctors)
  *(SORT(.ctors.*))
-                0x00002224                PROVIDE (__CTOR_END__, ABSOLUTE (.))
-                0x00002224                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+                0x00002220                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x00002220                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
  *(.dtors)
  *(SORT(.dtors.*))
-                0x00002224                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+                0x00002220                PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x00002224                . = ALIGN (0x4)
+                0x00002220                . = ALIGN (0x4)
 
-.rodata         0x00002224        0x0
-                0x00002224                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x00002224                . = ALIGN (0x4)
+.rodata         0x00002220        0x0
+                0x00002220                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x00002220                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
-                0x00002224                . = ALIGN (0x4)
-                0x00002224                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x00002224                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x00002220                . = ALIGN (0x4)
+                0x00002220                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x00002220                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x00002224        0x4 load address 0x00002228
-                0x00002224                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x00002224                . = ALIGN (0x4)
+.rwdata         0x00002220        0x4 load address 0x00002224
+                0x00002220                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x00002220                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00002224        0x0 ../sum41_bsp//obj/HAL/src/crt0.o
- .data          0x00002224        0x0 obj/default/hello_world_small.o
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
- .data          0x00002224        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
-                0x0000a224                _gp = ABSOLUTE ((. + 0x8000))
-                0x0000a224                PROVIDE (gp, _gp)
+ .data          0x00002220        0x0 ../sum41_bsp//obj/HAL/src/crt0.o
+ .data          0x00002220        0x0 obj/default/hello_world_small.o
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .data          0x00002220        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+                0x0000a220                _gp = ABSOLUTE ((. + 0x8000))
+                0x0000a220                PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x00002224        0x4 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x00002224                rs232
+ .sdata         0x00002220        0x4 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00002220                rs232
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x00002228                . = ALIGN (0x4)
-                0x00002228                _edata = ABSOLUTE (.)
-                0x00002228                PROVIDE (edata, ABSOLUTE (.))
-                0x00002228                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x00002228                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x00002224                . = ALIGN (0x4)
+                0x00002224                _edata = ABSOLUTE (.)
+                0x00002224                PROVIDE (edata, ABSOLUTE (.))
+                0x00002224                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x00002224                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000222c        0xc
-                0x0000222c                __bss_start = ABSOLUTE (.)
-                0x0000222c                PROVIDE (__sbss_start, ABSOLUTE (.))
-                0x0000222c                PROVIDE (___sbss_start, ABSOLUTE (.))
+.bss            0x00002228        0xc
+                0x00002228                __bss_start = ABSOLUTE (.)
+                0x00002228                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x00002228                PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000222c        0xc ../sum41_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000222c                alt_argc
-                0x00002230                alt_argv
-                0x00002234                alt_envp
+ .sbss          0x00002228        0xc ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+                0x00002228                alt_argc
+                0x0000222c                alt_argv
+                0x00002230                alt_envp
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
-                0x00002238                PROVIDE (__sbss_end, ABSOLUTE (.))
-                0x00002238                PROVIDE (___sbss_end, ABSOLUTE (.))
+                0x00002234                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x00002234                PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x00002238        0x0 ../sum41_bsp//obj/HAL/src/crt0.o
- .bss           0x00002238        0x0 obj/default/hello_world_small.o
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
- .bss           0x00002238        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .bss           0x00002234        0x0 ../sum41_bsp//obj/HAL/src/crt0.o
+ .bss           0x00002234        0x0 obj/default/hello_world_small.o
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .bss           0x00002234        0x0 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
  *(COMMON)
-                0x00002238                . = ALIGN (0x4)
-                0x00002238                __bss_end = ABSOLUTE (.)
+                0x00002234                . = ALIGN (0x4)
+                0x00002234                __bss_end = ABSOLUTE (.)
 
 .onchip_memory2_0
-                0x00002238        0x0
-                0x00002238                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+                0x00002234        0x0
+                0x00002234                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
  *(.onchip_memory2_0. onchip_memory2_0.*)
-                0x00002238                . = ALIGN (0x4)
-                0x00002238                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
-                0x00002238                _end = ABSOLUTE (.)
-                0x00002238                end = ABSOLUTE (.)
-                0x00002238                __alt_stack_base = ABSOLUTE (.)
-                0x00002238                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+                0x00002234                . = ALIGN (0x4)
+                0x00002234                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x00002234                _end = ABSOLUTE (.)
+                0x00002234                end = ABSOLUTE (.)
+                0x00002234                __alt_stack_base = ABSOLUTE (.)
+                0x00002234                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
 
 .stab
  *(.stab)
@@ -327,41 +327,41 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
  .debug_pubnames
                 0x0000014f       0x27 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
 
-.debug_info     0x00000000      0x79c
+.debug_info     0x00000000      0x780
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0x6b ../sum41_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000006b       0xfd obj/default/hello_world_small.o
- .debug_info    0x00000168      0x12e ../sum41_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x00000296      0x125 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x000003bb      0x153 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x0000050e       0x9f ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x000005ad       0x8d ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x0000063a       0x8d ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_info    0x000006c7       0xd5 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_info    0x0000006b       0xe1 obj/default/hello_world_small.o
+ .debug_info    0x0000014c      0x12e ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000027a      0x125 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000039f      0x153 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x000004f2       0x9f ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000591       0x8d ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000061e       0x8d ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_info    0x000006ab       0xd5 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
 
-.debug_abbrev   0x00000000      0x411
+.debug_abbrev   0x00000000      0x420
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x12 ../sum41_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x00000012       0x88 obj/default/hello_world_small.o
- .debug_abbrev  0x0000009a       0x97 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x00000131       0xa6 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x000001d7       0xdc ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x000002b3       0x57 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x0000030a       0x3f ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x00000349       0x3f ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_abbrev  0x00000388       0x89 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_abbrev  0x00000012       0x97 obj/default/hello_world_small.o
+ .debug_abbrev  0x000000a9       0x97 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000140       0xa6 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000001e6       0xdc ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000002c2       0x57 ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000319       0x3f ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000358       0x3f ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_abbrev  0x00000397       0x89 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
 
-.debug_line     0x00000000     0x113f
+.debug_line     0x00000000     0x1137
  *(.debug_line)
  .debug_line    0x00000000       0x72 ../sum41_bsp//obj/HAL/src/crt0.o
- .debug_line    0x00000072      0x24d obj/default/hello_world_small.o
- .debug_line    0x000002bf      0x217 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x000004d6      0x2c2 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x00000798      0x266 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x000009fe      0x1cd ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x00000bcb      0x1c5 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x00000d90      0x1ce ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
- .debug_line    0x00000f5e      0x1e1 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_line    0x00000072      0x245 obj/default/hello_world_small.o
+ .debug_line    0x000002b7      0x217 ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x000004ce      0x2c2 ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000790      0x266 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000009f6      0x1cd ../sum41_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000bc3      0x1c5 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000d88      0x1ce ../sum41_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_line    0x00000f56      0x1e1 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
 
 .debug_frame    0x00000000      0x154
  *(.debug_frame)
@@ -393,13 +393,13 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
  .debug_str     0x00000375       0x2c ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
                                 0x109 (size before relaxing)
 
-.debug_loc      0x00000000       0xd4
+.debug_loc      0x00000000       0xe7
  *(.debug_loc)
- .debug_loc     0x00000000       0x51 obj/default/hello_world_small.o
- .debug_loc     0x00000051       0x1f ../sum41_bsp/\libhal_bsp.a(alt_load.o)
- .debug_loc     0x00000070       0x1f ../sum41_bsp/\libhal_bsp.a(alt_main.o)
- .debug_loc     0x0000008f       0x32 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x000000c1       0x13 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_loc     0x00000000       0x64 obj/default/hello_world_small.o
+ .debug_loc     0x00000064       0x1f ../sum41_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_loc     0x00000083       0x1f ../sum41_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x000000a2       0x32 ../sum41_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x000000d4       0x13 ../sum41_bsp/\libhal_bsp.a(alt_icache_flush.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -423,8 +423,8 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
                 0x00000000       0x30 ../sum41_bsp//obj/HAL/src/crt0.o
                 0x00004000                __alt_data_end = 0x4000
                 0x00004000                PROVIDE (__alt_stack_pointer, __alt_data_end)
-                0x00002238                PROVIDE (__alt_stack_limit, __alt_stack_base)
-                0x00002238                PROVIDE (__alt_heap_start, end)
+                0x00002234                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x00002234                PROVIDE (__alt_heap_start, end)
                 0x00004000                PROVIDE (__alt_heap_limit, 0x4000)
 OUTPUT(sum41.elf elf32-littlenios2)
 

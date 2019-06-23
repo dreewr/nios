@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'nios'
  * SOPC Builder design path: C:/Users/User/Documents/nios_repo/nios/nios.sopcinfo
  *
- * Generated: Wed Jun 19 00:32:17 BRT 2019
+ * Generated: Sat Jun 22 21:48:04 BRT 2019
  */
 
 /*
@@ -149,24 +149,51 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/rs232"
-#define ALT_STDERR_BASE 0x5000
+#define ALT_STDERR_BASE 0x5020
 #define ALT_STDERR_DEV rs232
 #define ALT_STDERR_IS_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_uart"
 #define ALT_STDIN "/dev/rs232"
-#define ALT_STDIN_BASE 0x5000
+#define ALT_STDIN_BASE 0x5020
 #define ALT_STDIN_DEV rs232
 #define ALT_STDIN_IS_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_uart"
 #define ALT_STDOUT "/dev/rs232"
-#define ALT_STDOUT_BASE 0x5000
+#define ALT_STDOUT_BASE 0x5020
 #define ALT_STDOUT_DEV rs232
 #define ALT_STDOUT_IS_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_uart"
 #define ALT_SYSTEM_NAME "nios"
+
+
+/*
+ * command configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_command altera_avalon_pio
+#define COMMAND_BASE 0x5040
+#define COMMAND_BIT_CLEARING_EDGE_REGISTER 0
+#define COMMAND_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define COMMAND_CAPTURE 0
+#define COMMAND_DATA_WIDTH 3
+#define COMMAND_DO_TEST_BENCH_WIRING 0
+#define COMMAND_DRIVEN_SIM_VALUE 0
+#define COMMAND_EDGE_TYPE "NONE"
+#define COMMAND_FREQ 50000000
+#define COMMAND_HAS_IN 1
+#define COMMAND_HAS_OUT 1
+#define COMMAND_HAS_TRI 0
+#define COMMAND_IRQ -1
+#define COMMAND_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define COMMAND_IRQ_TYPE "NONE"
+#define COMMAND_NAME "/dev/command"
+#define COMMAND_RESET_VALUE 0
+#define COMMAND_SPAN 16
+#define COMMAND_TYPE "altera_avalon_pio"
 
 
 /*
@@ -185,7 +212,7 @@
  */
 
 #define ALT_MODULE_CLASS_led altera_avalon_pio
-#define LED_BASE 0x5020
+#define LED_BASE 0x5070
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_CAPTURE 0
@@ -224,7 +251,7 @@
 #define ONCHIP_MEMORY2_0_IRQ -1
 #define ONCHIP_MEMORY2_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define ONCHIP_MEMORY2_0_NAME "/dev/onchip_memory2_0"
-#define ONCHIP_MEMORY2_0_NON_DEFAULT_INIT_FILE_ENABLED 0
+#define ONCHIP_MEMORY2_0_NON_DEFAULT_INIT_FILE_ENABLED 1
 #define ONCHIP_MEMORY2_0_RAM_BLOCK_TYPE "AUTO"
 #define ONCHIP_MEMORY2_0_READ_DURING_WRITE_MODE "DONT_CARE"
 #define ONCHIP_MEMORY2_0_SINGLE_CLOCK_OP 0
@@ -236,12 +263,39 @@
 
 
 /*
+ * readdata configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_readdata altera_avalon_pio
+#define READDATA_BASE 0x5050
+#define READDATA_BIT_CLEARING_EDGE_REGISTER 0
+#define READDATA_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define READDATA_CAPTURE 0
+#define READDATA_DATA_WIDTH 8
+#define READDATA_DO_TEST_BENCH_WIRING 0
+#define READDATA_DRIVEN_SIM_VALUE 0
+#define READDATA_EDGE_TYPE "NONE"
+#define READDATA_FREQ 50000000
+#define READDATA_HAS_IN 1
+#define READDATA_HAS_OUT 1
+#define READDATA_HAS_TRI 0
+#define READDATA_IRQ -1
+#define READDATA_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define READDATA_IRQ_TYPE "NONE"
+#define READDATA_NAME "/dev/readdata"
+#define READDATA_RESET_VALUE 0
+#define READDATA_SPAN 16
+#define READDATA_TYPE "altera_avalon_pio"
+
+
+/*
  * rs232 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_rs232 altera_avalon_uart
-#define RS232_BASE 0x5000
+#define RS232_BASE 0x5020
 #define RS232_BAUD 115200
 #define RS232_DATA_BITS 8
 #define RS232_FIXED_BAUD 1
@@ -258,5 +312,32 @@
 #define RS232_TYPE "altera_avalon_uart"
 #define RS232_USE_CTS_RTS 0
 #define RS232_USE_EOP_REGISTER 0
+
+
+/*
+ * writedata configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_writedata altera_avalon_pio
+#define WRITEDATA_BASE 0x5060
+#define WRITEDATA_BIT_CLEARING_EDGE_REGISTER 0
+#define WRITEDATA_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define WRITEDATA_CAPTURE 0
+#define WRITEDATA_DATA_WIDTH 8
+#define WRITEDATA_DO_TEST_BENCH_WIRING 0
+#define WRITEDATA_DRIVEN_SIM_VALUE 0
+#define WRITEDATA_EDGE_TYPE "NONE"
+#define WRITEDATA_FREQ 50000000
+#define WRITEDATA_HAS_IN 1
+#define WRITEDATA_HAS_OUT 1
+#define WRITEDATA_HAS_TRI 0
+#define WRITEDATA_IRQ -1
+#define WRITEDATA_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define WRITEDATA_IRQ_TYPE "NONE"
+#define WRITEDATA_NAME "/dev/writedata"
+#define WRITEDATA_RESET_VALUE 0
+#define WRITEDATA_SPAN 16
+#define WRITEDATA_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

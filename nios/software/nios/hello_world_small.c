@@ -82,36 +82,116 @@
 #include "altera_avalon_pio_regs.h"
 #include "altera_avalon_uart_regs.h"
 
+
+# include <unistd.h>
+# include <fcntl.h>
+# include "sys/alt_stdio.h"
+
+#define TIME_STD 10000000
 void delay(int a){
+
 	volatile int i = 0;
-	while (i<a*1000000){
-		i++;
-	}
+
+	while (i<a*TIME_STD)i++;
+
 }
 //blink led
 
 void ledDemo(){
-	char a;
+
 	int b;
 	int led_on = 0;
-	a = IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE);
-	b = (int)a - 48;
+
+	b = IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE);
+
+	if ((b&0x60)&&0x6) {
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, 0x00);
+		IOWR_ALTERA_AVALON_PIO_DATA(WRITEDATA_BASE, 0x00);
+	}
+	else {
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,0xff);
+		IOWR_ALTERA_AVALON_PIO_DATA(WRITEDATA_BASE,0xff);
+	}
+
 	led_on ^= (1<<(b-1));
-	IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,led_on);
+	//IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,"11111111");
 	printf("led position %d\n",b);
 
 }
 
+int write_routine(){
+	alt_printf("Write Routine\n");
+
+
+
+ return 1;
+}
+
+int read_routine(){
+
+	alt_printf("Read Routine\n");
+	delay(1);
+
+	int b = IORD_ALTERA_AVALON_PIO_DATA(READDATA_BASE);
+	alt_printf("----Read Value: %x\n", b);
+	IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, b);
+
+return 1;
+}
 int main(){
-	//int numb = 10000;
+
+	int command = 0x00;
+	int operation_complete = 0;
+
 	while(1){
-		printf("hello from Uart! \n");
-		printf("Waiting command \n");
-		printf("******************* \n");
-		printf("\n");
-		ledDemo();
-		delay(1);
+
+		alt_printf("Digite a primeira palavra no formato 0xFF\n");
+
+		while(IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE)!=0xFF){
+			delay(1);
+		}
+
+		alt_printf("Envio de comandos iniciado\n");
+
+		while(operation_complete==0){
+
+			command = IORD_ALTERA_AVALON_UART_RXDATA(RS232_BASE);
+
+			if((command&0xFF)==0xFF){
+
+				alt_printf("Digite um comando valido\n");
+
+			}
+			else if(command==0x00) { //leitura
+
+				IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,0xff);
+
+				alt_printf("Comando de Leitura\n");
+
+				//Pega o valor em ReadData e imprime aqui na tela
+				//Ativa os pinos pra pegar valor de leitura
+
+
+				operation_complete = read_routine();
+
+			} else if (command >= 0x80) { //Primeiro bit sendo 1, o resto não importa pra ser escrita
+				alt_printf("Comando de Escrita\n");
+
+				//Ativa os pinos pra escrever o valor
+
+				operation_complete = write_routine();
+
+			} else {
+
+				alt_printf("Nenhum dos dois\n");
+			}
+
+			delay(2);
+
+		}
+		operation_complete = 0;
 	}
+
 return 0;
 }
 
